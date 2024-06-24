@@ -1,23 +1,56 @@
-## How this website works
+# Email Parser
 
-1. Connection to your Google or Outlook account through Google Gmail API and Microsoft Graph API.
-2. Giving necessary permission to read your emails.
-3. Response to the email by OpenAI API.
+## How This Website Works
 
-## How to run this file 
+1. **Connection to Your Email Account**:
+   - Connects to your Google or Outlook account through Google Gmail API and Microsoft Graph API.
+   - Requires necessary permissions to read your emails.
 
-1. Start the backend by running `node index.js`.
-2. In the frontend, serve the HTML file using a live server.
-   
-##  Must have 
+2. **Response to Emails**:
+   - Uses OpenAI API to generate responses to emails.
 
-1.GOOGLE_CLIENT_ID
-2.GOOGLE_CLIENT_SECRET
-3.GOOGLE_REDIRECT_URI
+## How to Run This Project
 
-4.OPENAI_API_KEY
+### Backend Setup
 
-5.OUTLOOK_CLIENT_ID
-6.OUTLOOK_CLIENT_SECRET
-7.OUTLOOK_REDIRECT_URI
-8.TENANT_ID
+1. **Start the Backend**:
+   - Run the following command to start the backend server:
+     ```bash
+     node index.js
+     ```
+
+### Frontend Setup
+
+1. **Serve the HTML File**:
+   - Use a live server to serve the frontend HTML file.
+
+## Environment Variables
+
+Ensure you have the following environment variables set up:
+
+- `GOOGLE_CLIENT_ID`: Your Google Client ID for OAuth authentication.
+- `GOOGLE_CLIENT_SECRET`: Your Google Client Secret for OAuth authentication.
+- `GOOGLE_REDIRECT_URI`: Redirect URI for Google OAuth.
+
+- `OPENAI_API_KEY`: API Key for OpenAI API.
+
+- `OUTLOOK_CLIENT_ID`: Your Outlook Client ID for OAuth authentication.
+- `OUTLOOK_CLIENT_SECRET`: Your Outlook Client Secret for OAuth authentication.
+- `OUTLOOK_REDIRECT_URI`: Redirect URI for Outlook OAuth.
+- `TENANT_ID`: Tenant ID for Microsoft Graph API.
+
+## Example `.env` File
+
+Create a `.env` file in the root directory with the following structure:
+
+```dotenv
+GOOGLE_CLIENT_ID=your_google_client_id
+GOOGLE_CLIENT_SECRET=your_google_client_secret
+GOOGLE_REDIRECT_URI=your_google_redirect_uri
+
+OPENAI_API_KEY=your_openai_api_key
+
+OUTLOOK_CLIENT_ID=your_outlook_client_id
+OUTLOOK_CLIENT_SECRET=your_outlook_client_secret
+OUTLOOK_REDIRECT_URI=your_outlook_redirect_uri
+TENANT_ID=your_tenant_id
